@@ -8,6 +8,7 @@ Nummade Kochi is an charitable organisation started by the students and the pass
 
     * Python 3.5
     * Django 1.10.2 (`pip install django==1.10.2`)
+    * Unipath (`pip install unipath-1.1`)
 
 Help needed? Start an issue on Github.
 

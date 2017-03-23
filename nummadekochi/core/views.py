@@ -3,16 +3,16 @@ from django.shortcuts import render
 from nummadekochi.core import models
 
 def main(request):
-    pass
+    return render(request, 'core/main.html')
 
 def about(request):
-    pass
+    return render(request, 'core/about.html')
 
 def donate(request):
-    pass
+    return render(request, 'core/donate.html')
 
 def stories(request):
-    pass
+    return render(request, 'core/stories.html')
 
 def contact_us(request):
-    pass
+    return render(request, 'core/contact_us.html')

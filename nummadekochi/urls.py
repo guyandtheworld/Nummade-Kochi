@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
 from nummadekochi.core import views as core_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', core_views.main, name="main"),
     url(r'^donate$', core_views.donate, name="donate"),
-    url(r'^about-us$',core_views.about, name="about_us"),
+    url(r'^about-us$',core_views.about, name="about_us"),   
     url(r'^stories$', core_views.stories, name="story"),
-    url(r'^contact-us$', core_views.contact_us, name="contact_us"),
+    url(r'^contact_us$', core_views.contact_us, name="contact_us"),
 ]
