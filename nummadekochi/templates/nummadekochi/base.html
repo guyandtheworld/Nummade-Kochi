@@ -6,7 +6,12 @@
     <meta name="author" content="Website for Nummade-Kochi"> 
     <meta name="description" content="Nummade-Kochi is a platform created to help the 
                                     needy by providing support through donating daily usables and resources">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link href="{% static 'nummadekochi/css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'nummadekochi/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'nummadekochi/js/jquery.min.css' %}"></script>
+    <script src="{% static 'nummadekochi/js/bootstrap.min.js' %}"></script>
+    <link rel="icon" href="images/favicon.png" />
     {% block title %}
     {% endblock %}
 
@@ -16,7 +21,26 @@
 </head>
 
 <body>
-
+	<div id="container">
+      <div id="header" class="navbar navbar-fixedtop" style="">
+        <div id="ribbon" style="">
+          <nav class="navbar navbar-inverse navbar-fixedtop s" style="position:absolute; right:100px; height:100%;">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Volunteer</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div id="num_logo" style=""><img id="logo_img" src="images/favicon2.jpg" alt="Nummade Kochi"  style="" /></div>
+      </div>
+    </div>
     {% block body %}
     {% endblock %}
 
