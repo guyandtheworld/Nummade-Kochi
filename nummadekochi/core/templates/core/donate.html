@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+
+{% block body %}
+    {% for item in items %}
+        <div>
+            <h2>{{ item.name }}</h2>
+            <img src="nummadekochi/{{ item.item_image }}">
+            <h4>{{ item.description }}</h4>
+            <h4>{{ item.added_time }}</h4>
+            <h4>{{ item.fulfilled }}</h4>
+            <br>
+        </div>
+    {% endfor %}
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw6ZcZ8HFWsVZ087vHZPZYdFqkJ8Qcay1YRJlfNCsxoUrIYg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+{% endblock body %}

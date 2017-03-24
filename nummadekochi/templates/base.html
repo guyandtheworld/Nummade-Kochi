@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Website for Nummade-Kochi"> 
+    <meta name="description" content="Nummade-Kochi is a platform created to help the 
+                                    needy by providing support through donating daily usables and resources">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link type="text/javascript" href="{% static 'js/jquery.min.css' %}">
+    <link type="text/javascript" href="{% static 'js/bootstrap.min.js' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    {% block title %}
+    {% endblock %}
+
+    {% block head %}
+    {% endblock %}'
+    
+</head>
+
+<body>
+	<div id="container">
+      <div id="header" class="navbar navbar-fixedtop" style="">
+        <div id="ribbon" style="">
+          <nav class="navbar navbar-inverse navbar-fixedtop s" style="position:absolute; right:100px; height:100%;">
+            <div class="container-fluid">
+              <ul class="nav navbar-nav">
+                <li><a href="{% url 'donate' %}">Donate</a></li>
+                <li><a href="{% url 'story' %}">Stories</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>
