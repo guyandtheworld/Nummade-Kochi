@@ -114,6 +114,8 @@ STATICFILES_DIRS = (
     PROJECT_DIR.child('static') ,
 )
 
-STATIC_ROOT =   os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT =   os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/static/media/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'nummadekochi', 'static', 'media')

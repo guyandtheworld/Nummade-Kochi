@@ -1,8 +1,9 @@
 from django.db import models
+from django.conf import settings
 
 class Item(models.Model):
     name = models.CharField(max_length=50)
-    item_image = models.ImageField(upload_to='nummadekochi/media')
+    item_image = models.ImageField(upload_to='')
     description = models.TextField(max_length=255)
     added_time = models.DateTimeField(auto_now_add=True)
     fulfilled = models.BooleanField(default=False)

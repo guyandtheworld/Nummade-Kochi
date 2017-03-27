@@ -12,8 +12,6 @@ def about(request):
 def donate(request):
     items = list(item for item in Item.objects.all()
                                         if not item.fulfilled)
-    print(items)
-    print(items[0].item_image)
     return render(request, 'core/donate.html',
                     {'items': items})
 
