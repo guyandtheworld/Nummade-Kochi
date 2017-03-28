@@ -10,7 +10,6 @@ body  {
  #header  {
   width:100%;
   height:350px;
-  background:url("../images/90o.png") fixed top no-repeat;
 }
 
  #ribbon  {
@@ -33,6 +32,8 @@ body  {
   top:60px;
   position:absolute;
   left:5%;
+  background-color:#fff;
+  border-radius:176px;
 }
 
 #logo_img  {
