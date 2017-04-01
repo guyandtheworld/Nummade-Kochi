@@ -1,0 +1,9 @@
+.item {
+    width: 260px;
+    height: 450px;
+    border: 25px solid black;
+    padding: 25px;
+    background-color: #8CA;
+    margin: 25px;
+    border-width: 10px;
+}
