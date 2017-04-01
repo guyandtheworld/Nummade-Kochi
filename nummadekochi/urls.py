@@ -13,7 +13,6 @@ urlpatterns = [
     url(r'^stories$', core_views.stories, name="story"),
     url(r'^contact_us$', core_views.contact_us, name="contact_us"),
 ]
-print(settings.MEDIA_URL, settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

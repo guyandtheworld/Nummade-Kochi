@@ -1,0 +1,25 @@
+#contain{
+  width:100%;
+
+}
+
+#brief{
+  width:80%;
+  height:100%;
+  position:absolute;
+  left:10%;
+  height:500px;
+}
+
+#brief div{
+  width:35%;
+  position:relative;
+}
+
+#lefted{
+  float:left;
+}
+
+#righted{
+  float:right;
+}
