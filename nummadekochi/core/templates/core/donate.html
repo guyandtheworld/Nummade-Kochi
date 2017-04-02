@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+
+{% block head %}
 {% block title %}
 <title>Nummade Kochi | Donate</title>
 {% endblock title %}
@@ -9,14 +11,17 @@
 
 {% block body %}
     <br>
-    {% for item in items %}
-        <div class="item">
-            <h2 class="text-primary">{{ item.name }}</h2>
-            <p>{{ item.added_time }}</p>
-            <img src="media/{{ item.item_image }}">
+<!--     <div class="col-xs-12 wrapper">
+ -->    {% for item in items %}
+        <div class="col-xs-12 item">
+            <h2 align="center" style="color:rgba(100,200,255,1);">{{ item.name }}</h2>
+            <p align="left" style="padding: 5px; color:#ddd">{{ item.added_time }}</p>
+            <img style="height:100%; width:100%; display: block; margin: 0 auto; border-radius: 10px;" src="media/{{ item.item_image }}">
             <br>
-            <p>{{ item.description }}</p>
+            <h4 style="color: #ddd">{{ item.description }}</p>
             <br>
-        </div>
+            <button class="btn btn-primary" type="submit" style="padding: 10px; display:block; margin: 0 auto; min-width: 250px;" align="middle">Donate</button>
+            <br>
+    </div>
     {% endfor %}
 {% endblock body %}
