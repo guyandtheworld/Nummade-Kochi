@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .models import Item, Story
 from .forms import ItemForm
 
+import PIL
+
 def main(request):
     return render(request, 'core/main.html')
 
