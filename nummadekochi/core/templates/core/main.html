@@ -6,21 +6,43 @@
 {% endblock title %}
 
 {% block head %}
-<link rel="stylsheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 {% endblock head %}
 
 {% block body %}
 <div id="contain" >
-  <div id="brief" >
-    <div style="position:relative; display:block;">
-      We are on a mission to change lives in poor communities around the world through simple practical interventions. We focus on 2 core areas: the family and youth education
-    </div>
-    <div id="lefted" >
-      <img src="{% static 'img/lefted.png' %}" style="width:75px; border-radius:50%; border:1px #ccffff;" />
-    </div>
-    <div id="righted" >
-      <img src="{% static 'img/lefted.png' %}" style="width:75px; border-radius:50%; border:1px #ccffff;" />
-    </div>
-  </div>
+  <section id="about">
+    <div class="container">
+	  <div class="row sub-section">
+        <div class="row">
+		  <div class="col-md-12">
+			<h2 style="margin:0 0 40px 0;color:#222;" class="text-center">
+			  We are on a mission to change lives in poor communities around the world through simple practical interventions. We focus on 2 core areas: the family and youth education
+			</h2>
+          </div>	
+        </div>
+		<div class="row">
+          <div class="col-md-6">
+            <div class="round-photo-icons" style="background-image:url({% static 'img/lefted.png' %});"></div>
+              <h3 style="color:#000;" class="text-center">THE FAMILY</h3>
+			  <div class="text-justify">
+							We help vulnerable families meet their basic needs of food, clean water, shelter, healthcare and education. Only with these necessities can a family live with dignity and its children grow up safely
+			  </div>
+		  </div>
+		  <div class="col-md-6">
+		    <div class="round-photo-icons" style="background-image:url({% static 'img/lefted.png' %});"></div>
+		    <h3 style="color:#000;" class="text-center">YOUTH EDUCATION</h3>
+			  <div class="text-justify">
+							We take children off the streets and put them into full time schooling. Education for young people is the single most powerful way to break the cycle of poverty
+			  </div>
+		  </div>
+		</div> 			
+	  </div>
+			
+	</div>
+  </section>
+  <section class="bg-orange" >
+    
+  </section>
 </div>
 {% endblock body %}
