@@ -3,23 +3,14 @@
 
 }
 
-#brief{
-  width:80%;
-  height:100%;
-  position:absolute;
-  left:10%;
-  height:500px;
-}
-
-#brief div{
-  width:35%;
-  position:relative;
-}
-
-#lefted{
-  float:left;
-}
-
-#righted{
-  float:right;
-}
+.round-photo-icons{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 30px;
+  display: block;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: scroll;
+  } 
