@@ -3,50 +3,194 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Website for Nummade-Kochi"> 
-    <meta name="description" content="Nummade-Kochi is a platform created to help the 
+    <meta name="author" content="Website for Nummade-Kochi">
+    <meta name="description" content="Nummade-Kochi is a platform created to help the
                                     needy by providing support through donating daily usables and resources">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1" >
     <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link type="text/javascript" href="{% static 'js/jquery.min.css' %}"> 
+    <link type="text/javascript" href="{% static 'js/jquery.min.css' %}">
     <link type="text/javascript" href="{% static 'js/bootstrap.min.js' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/zerogrid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="{% static 'js/jquery-latest.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/jquery183.min.js' %}"></script>
+      <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+      <script>
+      // You can also use "$(window).load(function() {"
+      $(function () {
+        // Slideshow
+        $("#slider").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+        });
+      });
+    </script>
+
+
+    <!--[if lt IE 8]>
+         <div style=' clear: both; text-align:center; position: relative;'>
+           <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+             <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+          </a>
+        </div>
+      <![endif]-->
+      <!--[if lt IE 9]>
+      <script src="{% static 'js/html5.js' %}"></script>
+      <script src="{% static 'js/css3-mediaqueries.js' %}"></script>
+    <![endif]-->
+
     {% block title %}
     {% endblock %}
 
     {% block head %}
     {% endblock %}
-    
+
 </head>
 
 <body>
-	<div class="container-fluid" style="padding-left:0px; padding-right:0px;">
-      <div id="header" class="navbar navbar-fixedtop" style="background:url({% static 'img/headbg.png' %}) top no-repeat;">
-        <div class="row" style="width:100%; display:inline-block;">
-          <div id="ribbon-left" class="col-md-1" style="height:55px; position:absolute; bottom:0px; background:#000; left:0px; display:inline-block;">
-            
-          </div>
-          <div id="num_logo" class="col-md-3" style="bottom:0px; display:inline-block;"><img id="logo_img" src="{% static 'img/logo.png' %}" alt="Nummade Kochi"  style="width:100%;" /></div>
-         <div id="ribbon-right" class="col-md-8" style="height:55px; position:absolute; bottom:0px; right:0px; background:#000; display:inline-block;">
-            <nav class="navbar navbar-inverse navbar-fixedtop s" style="position:absolute; right:100px;">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="{% url 'main' %}"><span class="glyphicon glyphicon-home"></span></a>
-                </div>
-                <ul class="nav navbar-nav">
-                  <li><a href="{% url 'donate' %}">Donate</a></li>
-                  <li><a href="{% url 'story' %}">Stories</a></li>
-                  <li><a href="{% url 'about_us' %}">About Us</a></li>
-                  <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+  <div class="wrap-body">
+
+<!-- /////////////////////////////////////////Top -->
+    <div class="top">
+    <div class="zerogrid">
+      <div class="row">
+        <div class="f-left">
+          <span><i class="fa fa-map-marker"></i> Brooklyn, NY 10036, United States </span>
+          <span><i class="fa fa-phone"></i> 1-800-123-1234; 1-800-123-5678</span>
+          <span><i class="fa fa-envelope"></i> example.com</span>
         </div>
+        <div class="f-right">
+          <span>Don't walk through life just playing football.</span>
+        </div>
+      </div>
     </div>
+    </div>
+
+    <!--////////////////////////////////////Header-->
+    <header>
+    <div class="wrap-header zerogrid">
+      <div class="row">
+        <div id="cssmenu">
+          <ul>
+             <li class='active'><a href="{% url 'main' %}">Home</a></li>
+             <li><a href="{% url 'story' %}">Stories</a></li>
+             <li><a href="{% url 'about_us' %}">About Us</a></li>
+             <li><a href="{% url 'contact_us' %}">Contact</a></li>
+          </ul>
+        </div>
+        <a href="{% url 'main' %}" class="logo"><img src="{% static 'img/logo.png' %}" /></a>
+      </div>
+    </div>
+    </header>
+  </div>
     {% block body %}
     {% endblock %}
+    <div class="wrap-body">
+      <footer>
+      	<div class="zerogrid top-footer">
+      		<div class="row">
+      			<div class="col-1-5">
+      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      			</div>
+      			<div class="col-1-5">
+      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      			</div>
+      			<div class="col-1-5">
+      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      			</div>
+      			<div class="col-1-5">
+      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      			</div>
+      			<div class="col-1-5">
+      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      			</div>
+      		</div>
+      	</div>
+      	<div class="zerogrid wrap-footer">
+      		<div class="row">
+      			<div class="col-1-4 col-footer-1">
+      				<div class="wrap-col">
+      					<h3>About Us</h3>
+      					<p>Nummade Kochi is an charitable organisation started by the students and the passouts of MEC. This is a site to serve the needy by letting the kind hearted people donate items to the managers of the site, who in turn will supply it to the needy.</p>
+      					<a href="{% url 'main' %}" class="logo"><img src="{% static 'img/logo.png' %}" /></a>
+      				</div>
+      			</div>
+      			<div class="col-1-4 col-footer-2">
+      				<div class="wrap-col">
+      					<h3>Categories</h3>
+      					<ul>
+      						<li><a href="#">Action</a></li>
+      						<li><a href="#">Romantic</a></li>
+      						<li><a href="#">Cartoon</a></li>
+      						<li><a href="#">Zombies</a></li>
+      					</ul>
+      				</div>
+      			</div>
+      			<div class="col-1-4 col-footer-3">
+      				<div class="wrap-col">
+      					<h3>Flickr Photos</h3>
+      					<div class="row">
+      						<div class="col-1-3">
+      							<div class="wrap-col">
+      								<a href="#"><img src="images/6.jpg" /></a>
+      								<a href="#"><img src="images/7.jpg" /></a>
+      								<a href="#"><img src="images/8.jpg" /></a>
+      							</div>
+      						</div>
+      						<div class="col-1-3">
+      							<div class="wrap-col">
+      								<a href="#"><img src="images/9.jpg" /></a>
+      								<a href="#"><img src="images/6.jpg" /></a>
+      								<a href="#"><img src="images/7.jpg" /></a>
+      							</div>
+      						</div>
+      						<div class="col-1-3">
+      							<div class="wrap-col">
+      								<a href="#"><img src="images/6.jpg" /></a>
+      								<a href="#"><img src="images/7.jpg" /></a>
+      								<a href="#"><img src="images/8.jpg" /></a>
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      			<div class="col-1-4 col-footer-4">
+      				<div class="wrap-col">
+      					<h3>Contact</h3>
+      					<span><i class="fa fa-envelope"></i> example@sports-club.com</span>
+      					<span><i class="fa fa-phone"></i> 1-800-123-1234; 1-800-123-5678</span>
+      					<span><i class="fa fa-map-marker"></i> Brooklyn, NY 10036, United States</span>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+      <div class="copyright">
+      	<div class="zerogrid wrapper">
+      		Copyright @ zSoccer - <a href="https://www.zerotheme.com" title="free html5 templates">Html5 Templates</a> by Zerotheme
+      		<ul class="quick-link f-right">
+      			<li><a href="#">Privacy Policy</a></li>
+      			<li><a href="#">Terms of Use</a></li>
+      		</ul>
+      	</div>
+      </div>
+    </div>
 
 </body>
 </html>

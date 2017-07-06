@@ -7,15 +7,15 @@ Nummade Kochi is an charitable organisation started by the students and the pass
 * First fork this repo and install the following dependencies on an virtual enviornment, More details about it is [here](https://tutorial.djangogirls.org/en/django_installation/)
 
     * Python 3.5
-    * Django 1.10.2 (`pip install django==1.10.2`)
-    * Pillow 4.0.0 (`pip install pillow==4.0.0`)
-    * Unipath (`pip install unipath-1.1`)
+    * Django 1.10.2 (`pip3 install django==1.10.2`)
+    * Pillow 4.0.0 (`pip3 install pillow==4.0.0`)
+    * Unipath (`pip3 install unipath-1.1`)
 
 Help needed? Start an issue on Github.
 
-Add upstream as https://github.com/fosscellmec/Nummade-Kochi.git as
+Add upstream as https://github.com/isht3/Nummade-Kochi.git as
 
-`git remote add upstream https://github.com/fosscellmec/Nummade-Kochi.git`
+`git remote add upstream https://github.com/isht3/Nummade-Kochi.git`
 
 and everytime your work is started on a branch, update your fork using the commands,
 
