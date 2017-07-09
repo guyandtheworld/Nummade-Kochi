@@ -32,7 +32,7 @@ input, textarea, select {margin:0; padding:0px;}
 
 html { -webkit-text-size-adjust: none;}
 .video embed,.video object,.video iframe { width: 100%;  height: auto;}
-img{max-width:auto;	height: 90px; width: auto\9; /* ie8 */}
+img{max-width:100%;	height: auto; width: auto\9; /* ie8 */}
 
 a{color: #212121;text-decoration: none;}
 a:hover { transition: text-shadow 0.3s ease-in 0s, color 0.3s ease-in 0s;text-shadow: 2px 2px 0px #F9BD28;}
@@ -172,7 +172,7 @@ article  h1.entry-title{line-height: 1.2;font-size: 38px;}
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Footer--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-footer{background: url(../images/footer-bg.png) repeat #111;color: #666;padding: 50px 0 20px;}
+footer{background:url('/static/images/footer-bg.png') repeat #111; color: #666; padding: 50px 0 20px;}
 
 footer h3{color: #fff;font-size: 22px;margin-bottom: 30px;}
 footer a{color:#92907C;}
@@ -451,7 +451,7 @@ a.button.bt2 {background: #0000ff;color: #ffffff;}
   text-decoration: none;
   height: 61px;
   width: 38px;
-  background: transparent url("../images/themes.gif") no-repeat left top;
+  background: transparent url('/static/images/themes.gif') no-repeat left top;
   margin-top: -45px;
   }
 

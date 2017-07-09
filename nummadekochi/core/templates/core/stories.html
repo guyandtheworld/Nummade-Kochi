@@ -12,11 +12,30 @@
 
 {% block body %}
     {% for story in stories %}
-        <div>
-            <h2>{{ story.title }}</h2>
-            <h4>{{ story.description }}</h4>
-            <h4>{{ story.created_date }}</h4>
-            <br>
-        </div>
+      <section id="container" class="sub-page">
+      	<div class="wrap-container zerogrid">
+      		<div id="main-content" class="col-1-1">
+      			<div class="wrap-col">
+      				<div class="wrap-content">
+      					<article>
+      						<div class="art-header">
+
+      							<img src="{% static 'images/headbg.png' %}">
+      						</div>
+      						<div class="art-content">
+      							<a href="#"><h3>{{ story.title }} </h3></a>
+      							<div class="info">{{ story.created_date }}</div>
+      							<p>{{ story.description }}</p>
+      							<a class="button button02" href="#">MORE</a>
+      						</div>
+      					</article>
+
+
+      				</div>
+      			</div>
+      		</div>
+
+      	</div>
+      </section>
     {% endfor %}
 {% endblock body %}

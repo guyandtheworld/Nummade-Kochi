@@ -11,17 +11,27 @@
 
 {% block body %}
     <br>
-<!--     <div class="col-xs-12 wrapper">
- -->    {% for item in items %}
-        <div class="col-xs-12 item">
-            <h2 align="center" style="color:rgba(100,200,255,1);">{{ item.name }}</h2>
-            <p align="left" style="padding: 5px; color:#ddd">{{ item.added_time }}</p>
-            <img style="height:100%; width:100%; display: block; margin: 0 auto; border-radius: 10px;" src="media/{{ item.item_image }}">
-            <br>
-            <h4 style="color: #ddd">{{ item.description }}</p>
-            <br>
-            <button class="btn btn-primary" type="submit" style="padding: 10px; display:block; margin: 0 auto; min-width: 250px;" align="middle">Donate</button>
-            <br>
-    </div>
-    {% endfor %}
+    <section id="container" class="sub-page">
+	<div class="wrap-container zerogrid">
+		<div id="main-content" class="col-1-1">
+			<div class="wrap-col">
+				<div class="wrap-content">
+          {% for item in items %}
+             <div class="col-1-4 item">
+                 <h2 align="center" style="color:rgba(100,200,255,1);">{{ item.name }}</h2>
+                 <p align="left" style="padding: 5px; color:#ddd">{{ item.added_time }}</p>
+                 <img style="height:100%; width:100%; display: block; margin: 0 auto; border-radius: 10px;" src="media/{{ item.item_image }}">
+                 <br>
+                 <h4 style="color: #ddd">{{ item.description }}</p>
+                 <br>
+                 <button class="btn btn-primary" type="submit" style="padding: 10px; display:block; margin: 0 auto; min-width: 250px;" align="middle">Donate</button>
+                 <br>
+             </div>
+          {% endfor %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
 {% endblock body %}

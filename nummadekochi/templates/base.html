@@ -11,7 +11,7 @@
     <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link type="text/javascript" href="{% static 'js/jquery.min.css' %}">
     <link type="text/javascript" href="{% static 'js/bootstrap.min.js' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'css/zerogrid.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/menu.css' %}">
@@ -71,12 +71,12 @@
     <div class="zerogrid">
       <div class="row">
         <div class="f-left">
-          <span><i class="fa fa-map-marker"></i> Brooklyn, NY 10036, United States </span>
+          <span><i class="fa fa-map-marker"></i> Karimakkad, Thrikkakara, Edappally, Kochi  </span>
           <span><i class="fa fa-phone"></i> 1-800-123-1234; 1-800-123-5678</span>
           <span><i class="fa fa-envelope"></i> example.com</span>
         </div>
         <div class="f-right">
-          <span>Don't walk through life just playing football.</span>
+          <span>An initiative by <b>THANAL</b>, Model Engineering College</span>
         </div>
       </div>
     </div>
@@ -84,20 +84,52 @@
 
     <!--////////////////////////////////////Header-->
     <header>
-    <div class="wrap-header zerogrid">
-      <div class="row">
-        <div id="cssmenu">
-          <ul>
-             <li class='active'><a href="{% url 'main' %}">Home</a></li>
-             <li><a href="{% url 'story' %}">Stories</a></li>
-             <li><a href="{% url 'about_us' %}">About Us</a></li>
-             <li><a href="{% url 'contact_us' %}">Contact</a></li>
-          </ul>
+      <div class="wrap-header zerogrid">
+        <div class="row">
+          <div id="cssmenu">
+            <ul>
+               <li class='active'><a href="{% url 'main' %}">Home</a></li>
+               <li class='active'><a href="{% url 'donate' %}">Donate</a></li>
+               <li><a href="{% url 'story' %}">Stories</a></li>
+               <li><a href="{% url 'about_us' %}">About Us</a></li>
+               <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+          </div>
+          <a href="{% url 'main' %}" class="logo"><img src="{% static 'images/logo.png' %}" style="max-width:auto; max-height:90px;" /></a>
         </div>
-        <a href="{% url 'main' %}" class="logo"><img src="{% static 'img/logo.png' %}" /></a>
       </div>
-    </div>
     </header>
+    <div class="bg-white">
+    	<div class="zerogrid">
+    		<!-- Slideshow -->
+    		<div class="callbacks_container">
+    			<ul class="rslides callbacks callbacks1" id="slider">
+    				<li id="callbacks1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
+    					<img src="{% static 'images/headbg.png' %}" alt="">
+    					<div class="caption">
+    						<h1>Title 1</h1>
+    						<span>subtitle 1</span>
+    					</div>
+    				</li>
+    				<li id="callbacks1_s1" class="callbacks1_on" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out;">
+    					<img src="{% static 'images/headbg.png' %}" alt="">
+    					<div class="caption">
+    						<h1>Title 2</h1>
+    						<span>subtitle 2</span>
+    					</div>
+    				</li>
+    				<li id="callbacks1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;">
+    					<img src="{% static 'images/headbg.png' %}" alt="">
+    					<div class="caption">
+    						<h1>title 3</h1>
+    						<span>subtitle 3</span>
+    					</div>
+    				</li>
+    			</ul><a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#" class="callbacks_nav callbacks1_nav next">Next</a>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+    </div>
   </div>
     {% block body %}
     {% endblock %}
@@ -106,76 +138,37 @@
       	<div class="zerogrid top-footer">
       		<div class="row">
       			<div class="col-1-5">
-      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      				<a href="#"><img src="{% static 'images/headbg.png' %}" /></a>
       			</div>
       			<div class="col-1-5">
-      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      				<a href="#"><img src="{% static 'images/headbg.png' %}" /></a>
       			</div>
       			<div class="col-1-5">
-      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      				<a href="#"><img src="{% static 'images/headbg.png' %}" /></a>
       			</div>
       			<div class="col-1-5">
-      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      				<a href="#"><img src="{% static 'images/headbg.png' %}" /></a>
       			</div>
       			<div class="col-1-5">
-      				<a href="#"><img src="{% static 'img/headbg.png' %}" /></a>
+      				<a href="#"><img src="{% static 'images/headbg.png' %}" /></a>
       			</div>
       		</div>
       	</div>
       	<div class="zerogrid wrap-footer">
       		<div class="row">
-      			<div class="col-1-4 col-footer-1">
+      			<div class="col-1-2 col-footer-2">
       				<div class="wrap-col">
       					<h3>About Us</h3>
       					<p>Nummade Kochi is an charitable organisation started by the students and the passouts of MEC. This is a site to serve the needy by letting the kind hearted people donate items to the managers of the site, who in turn will supply it to the needy.</p>
-      					<a href="{% url 'main' %}" class="logo"><img src="{% static 'img/logo.png' %}" /></a>
+      					<a href="{% url 'main' %}" class="logo"><img src="{% static 'images/nkochi-100x100.png' %}" /></a>
       				</div>
       			</div>
-      			<div class="col-1-4 col-footer-2">
-      				<div class="wrap-col">
-      					<h3>Categories</h3>
-      					<ul>
-      						<li><a href="#">Action</a></li>
-      						<li><a href="#">Romantic</a></li>
-      						<li><a href="#">Cartoon</a></li>
-      						<li><a href="#">Zombies</a></li>
-      					</ul>
-      				</div>
-      			</div>
-      			<div class="col-1-4 col-footer-3">
-      				<div class="wrap-col">
-      					<h3>Flickr Photos</h3>
-      					<div class="row">
-      						<div class="col-1-3">
-      							<div class="wrap-col">
-      								<a href="#"><img src="images/6.jpg" /></a>
-      								<a href="#"><img src="images/7.jpg" /></a>
-      								<a href="#"><img src="images/8.jpg" /></a>
-      							</div>
-      						</div>
-      						<div class="col-1-3">
-      							<div class="wrap-col">
-      								<a href="#"><img src="images/9.jpg" /></a>
-      								<a href="#"><img src="images/6.jpg" /></a>
-      								<a href="#"><img src="images/7.jpg" /></a>
-      							</div>
-      						</div>
-      						<div class="col-1-3">
-      							<div class="wrap-col">
-      								<a href="#"><img src="images/6.jpg" /></a>
-      								<a href="#"><img src="images/7.jpg" /></a>
-      								<a href="#"><img src="images/8.jpg" /></a>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-      			</div>
-      			<div class="col-1-4 col-footer-4">
+      			<div class="col-1-3 col-footer-4">
       				<div class="wrap-col">
       					<h3>Contact</h3>
       					<span><i class="fa fa-envelope"></i> example@sports-club.com</span>
       					<span><i class="fa fa-phone"></i> 1-800-123-1234; 1-800-123-5678</span>
-      					<span><i class="fa fa-map-marker"></i> Brooklyn, NY 10036, United States</span>
+      					<span><i class="fa fa-map-marker"></i> Karimakkad, Thrikkakara, Edappally, Kochi </span>
       				</div>
       			</div>
       		</div>
