@@ -7,6 +7,7 @@ class Item(models.Model):
     description = models.TextField(max_length=255)
     added_time = models.DateTimeField(auto_now_add=True)
     fulfilled = models.BooleanField(default=False)
+    price = models.FloatField(null=True)
 
     def __str__(self):
         return self.name
@@ -18,3 +19,12 @@ class Story(models.Model):
 
     def __str__(self):
         return self.title
+
+class Donateitem(models.Model):
+    quantity = models.IntegerField()
+    donor = models.CharField(max_length=50)
+    phone = models.IntegerField()
+    address = models.TextField()
+
+    def __str__(self):
+        return self.donor

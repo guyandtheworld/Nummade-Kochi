@@ -24,7 +24,11 @@
                  <br>
                  <h4 style="color: #ddd">{{ item.description }}</p>
                  <br>
-                 <button class="btn btn-primary" type="submit" style="padding: 10px; display:block; margin: 0 auto; min-width: 250px;" align="middle">Donate</button>
+                 <a href ="donate/{{item.id}}">
+                 <button class="btn btn-primary" type="submit" style="padding: 10px; display:block; margin: 0 auto; min-width: 250px;" align="middle">
+                     Donate
+                    </button>
+                </a>
                  <br>
              </div>
           {% endfor %}

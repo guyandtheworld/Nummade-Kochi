@@ -1,0 +1,112 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Website for Nummade-Kochi">
+    <meta name="description" content="Nummade-Kochi is a platform created to help the
+                                    needy by providing support through donating daily usables and resources">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1" >
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link type="text/javascript" href="{% static 'js/jquery.min.css' %}">
+    <link type="text/javascript" href="{% static 'js/bootstrap.min.js' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/zerogrid.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
+    <link href="{% static 'css/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="{% static 'js/jquery-latest.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+      <script src="{% static 'js/jquery183.min.js' %}"></script>
+      <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+      <script>
+      // You can also use "$(window).load(function() {"
+      $(function () {
+        // Slideshow
+        $("#slider").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+        });
+      });
+    </script>
+
+</head>
+
+<body>
+  <div class="wrap-body">
+
+<!-- /////////////////////////////////////////Top -->
+    <div class="top">
+    <div class="zerogrid">
+      <div class="row">
+        <div class="f-left">
+          <span><i class="fa fa-map-marker"></i> Karimakkad, Thrikkakara, Edappally, Kochi  </span>
+          <span><i class="fa fa-phone"></i> 1-800-123-1234; 1-800-123-5678</span>
+          <span><i class="fa fa-envelope"></i> example.com</span>
+        </div>
+        <div class="f-right">
+          <span>An initiative by <b>THANAL</b>, Model Engineering College</span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--////////////////////////////////////Header-->
+    <header>
+      <div class="wrap-header zerogrid">
+        <div class="row">
+          <div id="cssmenu">
+            <ul>
+               <li class='active'><a href="{% url 'main' %}">Home</a></li>
+               <li class='active'><a href="{% url 'donate' %}">Donate</a></li>
+               <li><a href="{% url 'story' %}">Stories</a></li>
+               <li><a href="{% url 'about_us' %}">About Us</a></li>
+               <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+          </div>
+          <a href="{% url 'main' %}" class="logo"><img src="{% static 'images/logo.png' %}" style="max-width:auto; max-height:90px;" /></a>
+        </div>
+      </div>
+    </header>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="form-group">
+      <form method="post">
+        {% csrf_token %}
+            <div class="jumbotron">
+            <h1> PAYMENT </h1>
+            </div>
+        {% for field in form %}
+        
+              {{ field.label_tag }}
+            </br>
+              {{ field }}
+
+              {{ item1 }}
+             </br> 
+              
+  {% endfor %}
+
+    <!-- {{ form.as_table }} -->
+        <button type="submit" class="btn btn-primary">Create an account</button>
+          </div>
+    </form>
+  </div>
+ </div>
+</body>
+</html>
