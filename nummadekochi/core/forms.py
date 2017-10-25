@@ -13,3 +13,8 @@ class DonateForm(forms.ModelForm):
     class Meta:
         model = Donateitem
         fields = ['quantity','donor','phone','address']
+
+class StoryForm(forms.ModelForm):
+	class Meta:
+		model = Story
+		fields = ['title','description','story_image']
